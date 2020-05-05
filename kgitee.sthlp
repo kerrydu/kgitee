@@ -4,8 +4,8 @@
 
 {phang}
 {cmd:kgitee} {hline 2} list/install Stata packages in 
-kerrydu.gitee.com
- 
+gitee.com/kerrydu
+
 
 {title:Syntax}
 
@@ -40,10 +40,10 @@ are the same.  force implies replace.{p_end}
 
     list installable packages in kerrydu.gitee.com
         . kgitee
-		   
+    	   
     install gtfpch 
         . kgitee gtfpch
-                
+
 
 {title:Author}
 

@@ -1,6 +1,6 @@
  ##  kgitee 
 
-​          list/install Stata packages in kerrydu.gitee.com
+​          list/install Stata packages in gitee.com/kerrydu
 
 ### Notation
 

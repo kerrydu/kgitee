@@ -1,6 +1,6 @@
 The following installable commands are found:
 
-* kgitee: list/install Stata packages in kerrydu.gitee.com [[gitee]](https://gitee.com/kerrydu/kgitee)
+* kgitee: list/install Stata packages in gitee.com/kerrydu [[gitee]](https://gitee.com/kerrydu/kgitee)
 
 * gitee: Install Stata package in Gitee[[gitee]](https://gitee.com/kerrydu/gitee)
 
