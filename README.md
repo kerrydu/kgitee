@@ -1,9 +1,3 @@
-## Demo
-
-<iframe src="//player.bilibili.com/player.html?aid=370619088&bvid=BV11Z4y1s7ry&cid=187534634&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-
-
  ##  kgitee 
 
 ​          list/install Stata packages in gitee.com/kerrydu
@@ -21,6 +15,10 @@
 * Stata 16
 
   Following the Notation to install `curl` first, and then copy `kgitee` into `c(pwd)` directory in your Stata 16. Prompt `kgitee kgitee` for installation.
+
+
+
+> A demo vedio is [here](https://www.bilibili.com/video/BV11Z4y1s7ry/)
 
 ### Notation
 
