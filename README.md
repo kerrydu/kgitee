@@ -6,13 +6,15 @@
 
 ## Installation
 
-* Method I: via `curl`
+* Stata 14/15
 
-Copy `kgitee.ado`  into  `c(pwd)` directory in your Stata 16. After installing `curl`, type `kgitee kgitee` in the Command Window. 
+  ```
+  net install kgitee, from(https://gitee.com/kerrydu/kgitee/raw/master) replace
+  ```
 
-* Method 2: via Stata 14 or Stata 15
+* Stata 16
 
-  
+  Following the Notation to install `curl` first, and then copy `kgitee` into `c(pwd)` directory in your Stata 16. Prompt `kgitee kgitee` for installation.
 
 ### Notation
 
