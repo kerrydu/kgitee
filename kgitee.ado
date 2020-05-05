@@ -60,7 +60,7 @@ program define kgitee
 		}
 		di 
 		di "The packages listed above can be installed by"
-		di "                       kgitee pkgname, [replace force]" 
+		di "                       kgitee pkgname, [replace force statapath(string)]" 
 		
 		restore
 		
