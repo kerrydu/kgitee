@@ -6,7 +6,7 @@ The following installable commands are found:
 
 * mepi: Malmquist Energy Productivity Index in Stata [[gitee]](https://gitee.com/kerrydu/mepi)
 
-* gftpch: Total Factor Productivity with Undesirable Outputs in Stata [[gitee]](https://gitee.com/kerrydu/gtfpch)
+* gtfpch: Total Factor Productivity with Undesirable Outputs in Stata [[gitee]](https://gitee.com/kerrydu/gtfpch)
 
 * malmq2: Malmquist Productivity index in Stata  [[gitee]](https://gitee.com/kerrydu/malmq2)
 
