@@ -256,7 +256,7 @@ void function _wrdofile(string scalar sysdir_plus, string scalar cmdline)
      fwrite(writefile, sprintf("%s  \r\n", addplus))
      fwrite(writefile, sprintf("%s  \r\n", setplus))
      fwrite(writefile, sprintf("%s  \r\n", stataexc))
-     fwrite(writefile, sprintf("exit  \r\n"))
+     //fwrite(writefile, sprintf("exit  \r\n"))
      fclose(writefile)
 
   }
