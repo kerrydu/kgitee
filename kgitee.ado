@@ -22,10 +22,10 @@ program define kgitee
 
          mata: _wrdofile(`"`sysdir_plus'"',`"`0'"')
 
-		!`statapath' do "`pwd'/_dotemp_kgitee_.do"
+		winexec `statapath' do "`pwd'/_dotemp_kgitee_.do"
 
-        cap erase  _dotemp_kgitee_.do
-        ! 
+        //cap erase  _dotemp_kgitee_.do
+        exit
 
 	}
 	
