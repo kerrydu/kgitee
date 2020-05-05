@@ -3,7 +3,14 @@
 
 cap program drop kgitee
 program define kgitee
-	version 16 
+	version 14
+
+	if(`c(stata_version)'<16){
+		kgitee14 `0'
+		exit
+	}
+
+
 	syntax [anything], [replace force ]
 	
 	preserve
@@ -83,6 +90,72 @@ program define kgitee
 end
 
 
+//////////////////////////////
+
+cap program drop kgitee14
+program define kgitee14
+
+	version 14
+	syntax [anything], [replace force ]
+	
+	preserve
+	tokenize `"`0'"', p(",")
+	
+	tempfile temp
+	
+	mata: pkglist=cat("https://gitee.com/kerrydu/kgitee/raw/master/pkglist.md")
+	mata: pkglist=select(pkglist,pkglist:!="")
+	
+	//preserve
+	
+	qui getmata plist=pkglist,replace
+	//qui replace plist=subinstr(plist,"*",_n,1)
+	qui drop if missing(plist) | ustrregexm(plist, "^( )+$")
+	qui split plist, p("[[gitee]]")
+	qui keep plist1 plist2
+	qui gen n=_n-1
+	qui replace plist1="  "+string(n)+"."+subinstr(plist1,"*","",1) if _n>1
+	qui replace plist2=usubstr(plist2,2,.)
+	qui replace plist2=usubstr(plist2,1,ustrlen(plist2)-1)
+	qui drop n
+	
+	if `"`1'"'==""|`"`1'"'==","{
+	    di 
+	    local N=_N
+		forv j=1/`N'{
+		    local di=plist1[`j']
+		    di `"  `di'"'
+		}
+		di 
+		di "The packages listed above can be installed by"
+		di "                       kgitee pkgname, [replace force]" 
+		
+		restore
+		
+	}
+	else{
+	    
+		qui split plist1, p(". " :) gen(q)
+		
+		qui keep if q2==`"`1'"'
+		if `=_N'==0{
+		    di as red `"The specified pkgname [`1'] NOT found."'
+		    restore
+		}
+		else{
+			 local url=plist2[1]
+	         net install `1',from(`url'/raw/master)	
+			 restore
+			
+		}
+		
+
+		
+	}
+
+
+
+end
 
 cap mata mata drop notation()
 cap mata mata drop strconcat()	

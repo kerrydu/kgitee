@@ -1,0 +1,9 @@
+v 2.0
+d 'kgitee': list/install Stata packages from gitee.com/kerrydu
+d 
+d Distribution-Date:   20200505
+d 
+F kgitee.ado
+F kgitee.sthlp
+
+
