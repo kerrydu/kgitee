@@ -1,0 +1,1 @@
+"%SystemRoot%\System32\Expand.exe"  yourpath1\curl-7.64.1.cab  /F:*  yourpath2
