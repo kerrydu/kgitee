@@ -1,17 +1,14 @@
-The following installable commands are found:
+ ##  kgitee 
 
-* gitee: Install Stata package in Gitee[[gitee]](https://gitee.com/kerrydu/gitee)
+​          list/install Stata packages in kerrydu.gitee.com
 
-* xtplfc: Stata  module to estimate partially linear functional-coefficient panel data models  [[gitee]](https://gitee.com/kerrydu/xtplfc_Stata)
+### Notation
 
-* mepi: Malmquist Energy Productivity Index in Stata [[gitee]](https://gitee.com/kerrydu/mepi)
+Stata 16 is blocked by Gitee.com due to its user agent. curl is used to download the Stata files. Thus, you should install [**curl**](https://curl.haxx.se/)  and add curl into the system path before using **gitee** in Stata 16.
 
-* gtfpch: Total Factor Productivity with Undesirable Outputs in Stata [[gitee]](https://gitee.com/kerrydu/gtfpch)
 
-* malmq2: Malmquist Productivity index in Stata  [[gitee]](https://gitee.com/kerrydu/malmq2)
 
-* sbmeff: Slacks-based Measure of Efficiency in Stata  [[gitee]](https://gitee.com/kerrydu/sbmeff)
 
-* ddfeff: Directional Distance Function for Efficiency/Productivity Analysis in Stata [[gitee]](https://gitee.com/kerrydu/ddfeff)
 
-  
+
+

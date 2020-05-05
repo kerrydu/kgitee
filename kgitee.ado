@@ -1,14 +1,17 @@
+*! version 1.0
+* By Kerry Du, May 5 2020
+
 cap program drop kgitee
 program define kgitee
 	version 16 
 	syntax [anything], [replace force ]
 	
-	//preserve
+	preserve
 	tokenize `"`0'"', p(",")
 	
 	tempfile temp
 	
-	! curl "https://gitee.com/kerrydu/kgitee/raw/master/README.md" -o  "`temp'"
+	! curl "https://gitee.com/kerrydu/kgitee/raw/master/pkglist.md" -o  "`temp'"
 	mata: pkglist=cat("`temp'")
 	mata: pkglist=select(pkglist,pkglist:!="")
 	
@@ -20,7 +23,7 @@ program define kgitee
 	qui split plist, p("[[gitee]]")
 	qui keep plist1 plist2
 	qui gen n=_n-1
-	qui replace plist1=string(n)+"."+subinstr(plist1,"*","",1) if _n>1
+	qui replace plist1="  "+string(n)+"."+subinstr(plist1,"*","",1) if _n>1
 	qui replace plist2=usubstr(plist2,2,.)
 	qui replace plist2=usubstr(plist2,1,ustrlen(plist2)-1)
 	qui drop n
@@ -42,33 +45,35 @@ program define kgitee
 	else{
 	    
 		qui split plist1, p(". " :) gen(q)
-		list 
-		/*
+		
 		qui keep if q2==`"`1'"'
 		if `=_N'==0{
 		    di as red `"The specified pkgname [`1'] NOT found."'
+		    restore
 		}
 		else{
 			local pwd=c(pwd)
 			cap mkdir _gitee_tempfiles_
 			local dirfolder `c(pwd)'/_gitee_tempfiles_	
 			local url=plist2[1]
-			*!curl "`url'/raw/master/`1'.pkg" -o  "`dirfolder'/`pkg'.pkg"
+			!curl "`url'/raw/master/`1'.pkg" -o  "`dirfolder'/`1'.pkg"
+			!curl "`url'/raw/master/stata.toc" -o  "`dirfolder'/stata.toc"
 			
 			 mata: _dfstatafiles("`1'.pkg",`"`url'/raw/master/"',`"`dirfolder'"')
 			
-			 net install `pkg', from(`dirfolder') `rnew'
+			 net install `1', from(`dirfolder') `3'
 			 
-			 erase "`dirfolder'/`pkg'.pkg"
+			 cap erase "`dirfolder'/`1'.pkg"
+			 cap erase "`dirfolder'/stata.toc"
 			 foreach fi of local dfstata{ 
 				 cap erase  "`dirfolder'/`fi'" 
 			 }	
 			 
 			 cap erase "`dirfolder'"	
-			// restore
+			 restore
 			
 		}
-		*/
+		
 
 		
 	}
