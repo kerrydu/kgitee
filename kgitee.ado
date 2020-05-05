@@ -25,7 +25,7 @@ program define kgitee
 		!`statapath' do "`pwd'/_dotemp_kgitee_.do"
 
         cap erase  _dotemp_kgitee_.do
-        exit
+        ! 
 
 	}
 	
