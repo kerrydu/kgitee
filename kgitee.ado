@@ -7,11 +7,27 @@ program define kgitee
 
 	if(`c(stata_version)'<16){
 		kgitee14 `0'
+		//discard
 		exit
 	}
 
 
-	syntax [anything], [replace force ]
+	syntax [anything], [replace force statapath(string)]
+
+	if `"`statapath'"'!=""{
+		local pwd=c(pwd)
+		local 0=subinstr(`"`0'"',`"statapath(`statapath')"',"",.)
+
+		local sysdir_plus= c(sysdir_plus)
+
+         mata: _wrdofile(`"`sysdir_plus'"',`"`0'"')
+
+		!`statapath' do "`pwd'/_dotemp_kgitee_.do"
+
+        cap erase  _dotemp_kgitee_.do
+        exit
+
+	}
 	
 	preserve
 	tokenize `"`0'"', p(",")
@@ -148,6 +164,7 @@ program define kgitee14
 			 restore
 			
 		}
+		//discard
 		
 
 		
@@ -160,6 +177,7 @@ end
 cap mata mata drop notation()
 cap mata mata drop strconcat()	
 cap mata mata drop _dfstatafiles()	
+cap mata mata drop _wrdofile()
 mata:
 
 void function notation(string colvector filenames)
@@ -224,6 +242,25 @@ void function _dfstatafiles(string scalar pkg,string scalar url,string scalar di
 	fclose(writefile)	
 	
 }
+
+void function _wrdofile(string scalar sysdir_plus, string scalar cmdline)
+  {  
+     addplus="adopath ++ " + sysdir_plus
+
+     setplus= "sysdir set PLUS  " +  sysdir_plus
+
+     stataexc= "kgitee  " + cmdline
+			
+			
+     writefile=fopen("_dotemp_kgitee_.do","rw")
+     fwrite(writefile, sprintf("%s  \r\n", addplus))
+     fwrite(writefile, sprintf("%s  \r\n", setplus))
+     fwrite(writefile, sprintf("%s  \r\n", stataexc))
+     fwrite(writefile, sprintf("exit  \r\n"))
+     fclose(writefile)
+
+  }
+
 		
 end
 		
