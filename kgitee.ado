@@ -12,7 +12,7 @@ program define kgitee
 	}
 
 
-	syntax [anything], [replace force statapath(string)]
+	syntax [anything], [replace force STATApath(string)]
 
 	if `"`statapath'"'!=""{
 		local pwd=c(pwd)
