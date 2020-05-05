@@ -144,7 +144,7 @@ program define kgitee14
 		}
 		else{
 			 local url=plist2[1]
-	         net install `1',from(`url'/raw/master)	
+	         net install `1',from(`url'/raw/master)	`3'
 			 restore
 			
 		}
