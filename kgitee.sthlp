@@ -10,7 +10,7 @@ gitee.com/kerrydu
 {title:Syntax}
 
 {p 8 16 2}
-{cmd: kgitee}  [{it:pkgname}]  [{cmd:,} replace force statapath({it:Stata_directory})]
+{cmd: kgitee}  [{it:pkgname}]  [{cmd:,} replace force stata({it:Stata_directory})]
 {p_end}
 
 
@@ -29,7 +29,7 @@ files if any of the files already exists.{p_end}
 files if any of the files already exists, even if Stata thinks all the files 
 are the same.  force implies replace.{p_end}
 
-{synopt:{opt statapath(string)}}specifies using another Stata software as 
+{synopt:{opt stata(string)}}specifies using another Stata software as 
 the exteneral installer. {p_end}
 
 {synoptline}
@@ -48,7 +48,7 @@ the exteneral installer. {p_end}
         . kgitee gtfpch
 
     install gtfpch for Stata 16 using Stata 14 as the exteneral installer
-        . kgitee gtfpch, statapath(D:\Stata14\StataMP-64.exe)
+        . kgitee gtfpch, stata(D:\Stata14\StataMP-64.exe)
 
 
 {title:Notation}
