@@ -20,9 +20,17 @@
 
 > A demo vedio is [here](https://www.bilibili.com/video/BV11Z4y1s7ry/)
 
+----------------------------------------------------------------
+
 ### Notation
 
-Stata 16 is blocked by Gitee.com due to its user agent. curl is used to download the Stata files. Thus, you should install [**curl**](https://curl.haxx.se/windows/)  and add curl into the system path before using **gitee** in Stata 16.
+Stata 16 is blocked by Gitee.com due to its user agent. curl is used to download the Stata files. Thus, you should install [**curl**](https://curl.haxx.se/windows/)  and add curl into the system path before using **gitee** in Stata 16. Alternatively, you can use the `stata` option to specify another Stata version such as Stata 14 as an external installer. 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+## Instruction for installing curl 
 
 
 
