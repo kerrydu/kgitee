@@ -19,12 +19,12 @@ program define kgitee
 		local 0=subinstr(`"`0'"',`"stata(`stata')"',"",.)
 
 		local sysdir_plus= c(sysdir_plus)
-
-         mata: _wrdofile(`"`sysdir_plus'"',`"`0'"')
+		cap erase  _dotemp_kgitee_.do
+        mata: _wrdofile(`"`sysdir_plus'"',`"`0'"')
 
 		winexec `stata' do "`pwd'/_dotemp_kgitee_.do"
 
-        //cap erase  _dotemp_kgitee_.do
+        
         exit
 
 	}
