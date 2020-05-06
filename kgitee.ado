@@ -12,17 +12,17 @@ program define kgitee
 	}
 
 
-	syntax [anything], [replace force STATApath(string)]
+	syntax [anything], [replace force Stata(string)]
 
-	if `"`statapath'"'!=""{
+	if `"`stata'"'!=""{
 		local pwd=c(pwd)
-		local 0=subinstr(`"`0'"',`"statapath(`statapath')"',"",.)
+		local 0=subinstr(`"`0'"',`"stata(`stata')"',"",.)
 
 		local sysdir_plus= c(sysdir_plus)
 
          mata: _wrdofile(`"`sysdir_plus'"',`"`0'"')
 
-		winexec `statapath' do "`pwd'/_dotemp_kgitee_.do"
+		winexec `stata' do "`pwd'/_dotemp_kgitee_.do"
 
         //cap erase  _dotemp_kgitee_.do
         exit
