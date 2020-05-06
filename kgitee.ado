@@ -251,10 +251,16 @@ void function _wrdofile(string scalar sysdir_plus, string scalar cmdline)
 
      stataexc= "kgitee  " + cmdline
 			
-			
+     copykgitee="copy https://gitee.com/kerrydu/kgitee/raw/master/kgitee.ado  _kgiteeado_.do"	
+
      writefile=fopen("_dotemp_kgitee_.do","rw")
      fwrite(writefile, sprintf("%s  \r\n", addplus))
      fwrite(writefile, sprintf("%s  \r\n", setplus))
+     fwrite(writefile, sprintf("%s  \r\n", copykgitee))
+     fwrite(writefile, sprintf("cap which kgitee.ado  \r\n"))
+     fwrite(writefile, sprintf("if _rc!=0 {  \r\n"))
+     fwrite(writefile, sprintf("do _kgiteeado_.do  \r\n"))
+     fwrite(writefile, sprintf("}  \r\n"))
      fwrite(writefile, sprintf("%s  \r\n", stataexc))
      //fwrite(writefile, sprintf("exit  \r\n"))
      fclose(writefile)
