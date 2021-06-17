@@ -10,7 +10,7 @@ gitee.com/kerrydu
 {title:Syntax}
 
 {p 8 16 2}
-{cmd: kgitee}  [{it:pkgname}]  [{cmd:,} replace force stata({it:Stata_directory})]
+{cmd: kgitee}  [{it:pkgname}]  [{cmd:,} replace force ]
 {p_end}
 
 
@@ -47,16 +47,7 @@ the exteneral installer. {p_end}
     install gtfpch 
         . kgitee gtfpch
 
-    install gtfpch for Stata 16 using Stata 14 as the exteneral installer
-        . kgitee gtfpch, stata(D:\Stata14\StataMP-64.exe)
 
-
-{title:Notation}
-
-{p 4 4 2}
-
-    Stata 16 is blocked by Gitee.com. Thus, to use kgitee in Stata 16, either curl or Stata 14 
-    should be intalled first as an external installer.
 
 
 
