@@ -20,7 +20,7 @@ The following installable commands are found:
 
 * txls: transform excel xls/xlsx files [[gitee]](https://gitee.com/kerrydu/clearpsdinexcel/raw/master)
 
-* xlstocsv:  convert excel xls/xlsx fils to csv files [[gitee]](https://gitee.com/kerrydu/clearpsdinexcel/raw/master)
+* xlstocsv:  convert excel xls/xlsx files to csv files [[gitee]](https://gitee.com/kerrydu/clearpsdinexcel/raw/master)
 
   
 
