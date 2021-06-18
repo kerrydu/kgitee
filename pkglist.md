@@ -16,7 +16,7 @@ The following installable commands are found:
 
 * ddfeff: Directional Distance Function for Efficiency/Productivity Analysis in Stata [[gitee]](https://gitee.com/kerrydu/ddfeff/raw/master)
 
-* installpkg: install Stata packages from zipfiles or pkgfiles in directory [[gitee]](https://gitee.com/kerrydu/gitee/raw/master/installpkg])
+* installpkg: install Stata packages from zipfiles or pkgfiles in directory [[gitee]](https://gitee.com/kerrydu/gitee/raw/master/installpkg)
 
 * txls: transform excel xls/xlsx files [[gitee]](https://gitee.com/kerrydu/clearpsdinexcel/raw/master)
 
