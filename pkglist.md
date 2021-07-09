@@ -2,7 +2,7 @@ The following installable commands are found:
 
 * kgitee: list/install Stata packages in gitee.com/kerrydu [[gitee]](https://gitee.com/kerrydu/kgitee/raw/master)
 
-* gitee: Install Stata package in Gitee[[gitee]](https://gitee.com/kerrydu/gitee/raw/master)
+* gitee: Install Stata package in Gitee [[gitee]](https://gitee.com/kerrydu/gitee/raw/master)
 
 * xtplfc: Stata  module to estimate partially linear functional-coefficient panel data models  [[gitee]](https://gitee.com/kerrydu/xtplfc_Stata/raw/master)
 
@@ -21,6 +21,14 @@ The following installable commands are found:
 * txls: transform excel xls/xlsx files [[gitee]](https://gitee.com/kerrydu/clearpsdinexcel/raw/master)
 
 * xlstocsv:  convert excel xls/xlsx files to csv files [[gitee]](https://gitee.com/kerrydu/clearpsdinexcel/raw/master)
+
+* calk: Calculate capital stock by the perpetual inventory method [[gitee]](https://gitee.com/kerrydu/statamacroe/raw/master/)
+
+* calrgdp: Calculate real GDP  [[gitee]](https://gitee.com/kerrydu/statamacroe/raw/master/)
+
+* segmindex: Estimate regional market segmentation index  [[gitee]](https://gitee.com/kerrydu/statamacroe/raw/master/)
+
+* placebosim: Simulation of estimating treatment effect by randomly matching treatment policy with individuals  [[gitee]](https://gitee.com/kerrydu/statamacroe/raw/master/)
 
   
 
