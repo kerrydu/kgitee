@@ -7,6 +7,7 @@ program define kgitee
 	syntax [anything], [replace force ]
 	
 	preserve
+	clear
 	tokenize `"`0'"', p(",")
 	
 	tempfile temp
