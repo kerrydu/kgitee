@@ -39,6 +39,8 @@ program define kgitee
 		di "The packages listed above can be installed by"
 		di "                       kgitee pkgname, [replace force]" 
 		
+		di _n
+		di "Acknowledgement: Supported by National Natural Science Foundation of China (Grant nos. 72074184 and 71603148)"
 		restore
 		
 	}
