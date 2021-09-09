@@ -38,7 +38,7 @@ version 14
 	//mata: st_local("versionuse",subinstr(vfile[1]," ","",.))
 	mata: st_local("versionuse",vfile[1])
 	local versionuse = upper("`versionuse'")
-	local versionuse = subinstr("`versiongit'","VERSION","",.)	//
+	local versionuse = subinstr("`versionuse'","VERSION","",.)	//
 	local versionuse = subinstr("`versionuse'",char(9),"",.)
 	local versionuse = subinstr("`versionuse'","version","",.)
 	local versionuse = subinstr("`versionuse'","*","",.)

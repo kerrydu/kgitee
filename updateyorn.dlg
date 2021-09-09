@@ -2,8 +2,8 @@
 
 VERSION 14.0
 POSITION . . 250 60
-OK ok1,      label("Yes")
-CANCEL can1, label("No")
+OK ok1,      label("Next")
+//CANCEL can1, label("No")
 
 
 
@@ -11,13 +11,13 @@ CANCEL can1, label("No")
 //      https://help.github.com/articles/licensing-a-repository/
 
 
-DIALOG updateyorn, label("Upgrade package") 
+DIALOG updateyorn, label("Upgrade pkg") 
 BEGIN
 	  
 	// select installable files
 	TEXT tx_summary3  10  10   @   ., label("New version found")
 	
-	CHECKBOX cinst   10  +20   .   ., option(yorn) default(1) ///
+	CHECKBOX yorn   10  +20   .   ., option(yorn) default(1) ///
 	         label("upgrading...") 
 	//TEXT tx_summary4  10  +20   .   ., label("Create package information for installation?")
 
