@@ -1,4 +1,4 @@
-*! version 0.1 
+*! version 0.2
 cap program drop demo_updatecmd
 program define demo_updatecmd
 version 16

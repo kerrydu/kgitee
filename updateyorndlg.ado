@@ -2,8 +2,8 @@ program define updateyorndlg
 version 14
 
 syntax, [yorn]
-
-if "`yorn'"=="1"{
+//di "yorn`yorn'"
+if "`yorn'"!=""{
  
  	di "Updating $p_k_g_..."
     
