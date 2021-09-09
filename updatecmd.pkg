@@ -1,0 +1,9 @@
+v 2.02
+d 'updatecmd': update Stata package
+d 
+d Distribution-Date:   20200806
+d 
+F updatecmd.ado
+F updateyorndlg.ado
+F demo_updatecmd.ado
+F updateyorn.dlg
