@@ -55,6 +55,10 @@ version 14
 		global f_r_o_m_ `from'
 		db updateyorn
 	}
+	else{
+		cap macro drop c_m_d_0
+		cap macro drop p_k_g_
+	}
 
 end
 
