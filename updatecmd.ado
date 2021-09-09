@@ -31,6 +31,7 @@ version 14
 	//di "`i'"
 	//di "`j'"
 	local j =subinstr("`j'",".","",.)
+	if "`j'"=="" local j 0
    local versiongit `i'.`j'
 	qui findfile `anything'.ado
 	mata: vfile = cat("`r(fn)'")
@@ -48,6 +49,7 @@ version 14
 	//di "`i'"
 	//di "`j'"
 	local j =subinstr("`j'",".","",.)
+	if "`j'"=="" local j 0
    local versionuse `i'.`j'	
 	if(`versionuse'<`versiongit'){
 		global f_r_o_m_ `from'
