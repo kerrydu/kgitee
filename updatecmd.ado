@@ -1,4 +1,4 @@
-	
+*! version 1.0	
 cap program drop updatecmd
 program define updatecmd
 version 14
