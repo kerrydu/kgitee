@@ -16,3 +16,4 @@ The following installable commands are found:
 * segmindex: Estimate regional market segmentation index  [[gitee]](https://gitee.com/kerrydu/statamacroe/raw/master/)
 * placebosim: Simulation of estimating treatment effect by randomly matching treatment policy with individuals  [[gitee]](https://gitee.com/kerrydu/statamacroe/raw/master/)
 * dflp: Estimating input/output/directional distance using LP techniques  [[gitee]](https://gitee.com/kerrydu/dflp/raw/master/)
+* updatecmd: an automatic routine  to update user-written package  [[gitee]](https://gitee.com/kerrydu/kgitee/raw/master)
