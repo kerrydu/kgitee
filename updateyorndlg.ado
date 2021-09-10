@@ -1,9 +1,10 @@
+*! version 2
 program define updateyorndlg
 version 14
 
-syntax, [yorn]
-//di "yorn`yorn'"
-if "`yorn'"!=""{
+syntax, [YES NO]
+//di "yes: `yes'"
+if "`yes'"!="" & "`no'"==""{
  
  	di "Updating $p_k_g_..."
     

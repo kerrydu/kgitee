@@ -1,7 +1,7 @@
-
+//version 2
 
 VERSION 14.0
-POSITION . . 250 60
+POSITION . . 250 70
 OK ok1,      label("Next")
 //CANCEL can1, label("No")
 
@@ -15,10 +15,12 @@ DIALOG updateyorn, label("Upgrade pkg")
 BEGIN
 	  
 	// select installable files
-	TEXT tx_summary3  10  10   @   ., label("New version found")
+	TEXT tx_summary3  10  10   @   ., label("New version found. Upgrade?")
 	
-	CHECKBOX yorn   10  +20   .   ., option(yorn) default(1) ///
-	         label("upgrading...") 
+	CHECKBOX yes   10  +20   .   ., option(yes) default(0) ///
+	         label("Yes") 
+	CHECKBOX no   10  +20   .   ., option(no) default(0) ///
+	         label("No") 
 	//TEXT tx_summary4  10  +20   .   ., label("Create package information for installation?")
 
 	
@@ -36,8 +38,8 @@ BEGIN
 	put "updateyorndlg "
 	put ", "
 	
-    option updateyorn.yorn	
-    
+    option updateyorn.yes	
+    option updateyorn.no	
 		    
 		
 END
