@@ -5,6 +5,7 @@ version 14
 	syntax anything, from(string) [pkg(string)]  
 	 confirm names `anything' 
     if `"`pkg'"'==""  local pkg `anything'
+	confirm names `pkg'
     global p_k_g_ `pkg'
     global c_m_d_0 `anything' ${c_m_d_0}    
     global up_grade_`pkg' "tocheck" 
