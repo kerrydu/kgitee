@@ -9,7 +9,7 @@
 {title:Syntax}
 
 {p 8 16 2}
-{cmd: updatecmd}  {it:commandname}  {cmd:,} {it:from(website)} [{it:pkg(packagename)}]
+{cmd: updatecmd}  {it:commandname}  {cmd:,} {it:from(website)} [options]
 {p_end}
 
 
@@ -22,6 +22,8 @@
 {synoptline}
 
 {synopt:{opt from(website)}}specifies the website for installing the new version of the package. {p_end}
+
+{synopt:{opt froma(website)}}specifies the second source for installing the new version of the package. {p_end}
 
 {synopt:{opt pkg(packagename)}}specifies the packagename including the {it:commandname}. By default, pkg({it:commandname}) ia assumed. {p_end}
 
@@ -67,9 +69,9 @@ program define demo_updatecmd
         updatecmd demo_updatecmd, from("https://gitee.com/kerrydu/kgitee/raw/master/") pkg(`pkg') 	
     } 
     ********************************************
-    else{
+   
     di "hello, your code written here" // the content of your command placed here
-    }
+   
 
 end
 
