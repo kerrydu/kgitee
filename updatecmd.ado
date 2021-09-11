@@ -2,7 +2,7 @@
 cap program drop updatecmd
 program define updatecmd
 version 14
-	syntax anything, from(string) [pkg(string)]  
+	syntax anything, from(string) [froma(string) pkg(string)]  
 	 confirm names `anything' 
     if `"`pkg'"'==""  local pkg `anything'
 	confirm names `pkg'
@@ -10,12 +10,15 @@ version 14
     global c_m_d_0 `anything' ${c_m_d_0}    
     global up_grade_`pkg' "tocheck" 
 	cap mata: vfile = cat(`"`from'/`anything'.ado"') 
-	if _rc{ //failed to connnect the web, excute the cmd
-		global up_grade_`pkg' `"failedto{`from'}"'
-		$c_m_d_0
-		cap macro drop p_k_g_
-		cap macro drop c_m_d_0
-		exit
+	if _rc{
+		cap mata: vfile = cat(`"`froma'/`anything'.ado"')
+		if _rc{ //failed to connnect the web, excute the cmd
+			global up_grade_`pkg' `"failedto{`from'}"'
+			$c_m_d_0
+			cap macro drop p_k_g_
+			cap macro drop c_m_d_0
+			exit
+		}		
 	}
 	else global up_grade_`pkg' `"copyfrom{`from'}"'
 	mata: vfile = select(vfile,vfile:!="")
