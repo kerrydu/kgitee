@@ -50,6 +50,18 @@ program define demo_updatecmd
     // global c_m_d_0 is used in the updatecmd.ado
     global c_m_d_0 `0'  
     local pkg updatecmd // updatecmd should be replaced with your package name
+
+    //install the updatecmd package if it is missing
+    cap which updatecmd
+    if _rc{
+      cap net install updatecmd, from("https://github.com/kerrydu/kgitee/raw/master/") replace
+      if _rc{
+         cap net install updatecmd, from("https://gitee.com/kerrydu/kgitee/raw/master/") replace
+         If _rc global up_grade_`pkg' "updatecmd_is_missing"
+       }
+      
+    }
+
     //the first run of the command defines global up_grade_`pkg'
     if "${up_grade_`pkg'}"==""{ 
         updatecmd demo_updatecmd, from("https://gitee.com/kerrydu/kgitee/raw/master/") pkg(`pkg') 	
@@ -60,6 +72,10 @@ program define demo_updatecmd
     }
 
 end
+
+{phang}
+note: version number should be writen in REAL number. e.g., 1.2334 can be identied 
+while those like 1.2.345 and 1.234a would not. 
 
 
 
