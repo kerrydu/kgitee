@@ -10,7 +10,7 @@ if _rc{
   cap net install updatecmd, from("https://gitee.com/kerrydu/kgitee/raw/master/") replace
   if _rc{
      cap net install updatecmd, from("https://github.com/kerrydu/kgitee/raw/master/") replace
-     If _rc global up_grade_`pkg' "updatecmd_is_missing"
+     if _rc global up_grade_`pkg' "updatecmd_is_missing"
    }
   
 }
