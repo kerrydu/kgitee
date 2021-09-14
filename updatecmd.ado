@@ -67,6 +67,7 @@ version 14
 		db updateyorn
 	}
 	else{
+		$c_m_d_0
 		cap macro drop c_m_d_0
 		cap macro drop p_k_g_
 	}
