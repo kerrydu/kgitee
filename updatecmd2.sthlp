@@ -3,13 +3,13 @@
 {title:Title}
 
 {phang}
-{cmd:updatecmd} {hline 2} Check the update version of Stata packages 
+{cmd:updatecmd2} {hline 2} Check the update version of Stata packages 
 
 
 {title:Syntax}
 
 {p 8 16 2}
-{cmd: updatecmd}  {it:commandname}  {cmd:,} {it:from(website)} [options]
+{cmd: updatecmd2}  {it:commandname}  {cmd:,} {it:from(website)} [options]
 {p_end}
 
 
@@ -68,22 +68,21 @@ program define demo_updatecmd
     local checkcmd 0
     if "${up_grade_`pkg'}"==""{ 
         local checkcmd 1
-        updatecmd demo_updatecmd, from("https://gitee.com/kerrydu/kgitee/raw/master/")   ///
-                                  froma("https://github.com/kerrydu/kgitee/raw/master/") ///
-                                  pkg(`pkg') 	
+        updatecmd2 demo_updatecmd, from("https://gitee.com/kerrydu/kgitee/raw/master/")   ///
+                                   froma("https://github.com/kerrydu/kgitee/raw/master/") ///
+                                   pkg(`pkg')  
     } 
     if `checkcmd' exit
     ********************************************
-
-
+   
     di "hello, your code written here" // the content of your command placed here
    
 
 end
 
 {phang}
-note: version number should be writen in REAL number. e.g., 1.2334 can be identied 
-while those like 1.2.345 and 1.234a would not. 
+note: version number should be writen in #.#.#.#, e.g., 1.2.3.34 can be identied 
+while those like a1.2.345 and 1.234a would not. 
 
 
 

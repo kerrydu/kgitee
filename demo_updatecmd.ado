@@ -1,4 +1,4 @@
-*! version 0.2
+*! version 0.0.2
 cap program drop demo_updatecmd
 program define demo_updatecmd
 version 16
@@ -16,7 +16,7 @@ if _rc{
 }
 
  if "${up_grade_`pkg'}"==""{ // The first run of cmd is checking the update version
-     updatecmd demo_updatecmd, from("https://gitee.com/kerrydu/kgitee/raw/master/") pkg(`pkg') 	
+     updatecmd2 demo_updatecmd, from("https://gitee.com/kerrydu/kgitee/raw/master/") pkg(`pkg') 	
  } 
 else{
   di "hello...."
