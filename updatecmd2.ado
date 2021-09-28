@@ -18,9 +18,10 @@ version 14
 			cap macro drop p_k_g_
 			cap macro drop c_m_d_0
 			exit
-		}		
+		}
+		local from `froma'		
 	}
-	else global up_grade_`pkg' `"copyfrom{`from'}"'
+	global up_grade_`pkg' `"copyfrom{`from'}"'
 	mata: vfile = select(vfile,vfile:!="")
 	mata: vfile = usubinstr(vfile,char(9)," ",.)
 	mata: vfile = select(vfile,!ustrregexm(vfile,"^( )+$"))
